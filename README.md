@@ -1,4 +1,4 @@
-# Disaster Response Pipeline Project
+# Udacity DSND Capstone Investment And Trading Project
 
 ## Table of Contents
 1. [Description](#description)
@@ -14,14 +14,14 @@
 <a name="descripton"></a>
 ## Description
 
-This Project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight.
-The initial dataset contains pre-labelled tweet and messages from real-life disaster. 
-The aim of the project is to build a Natural Language Processing tool that categorize messages.
+This Project is part of Data Science Nanodegree Program by Udacity.
+The initial dataset contains stock price of ITC of past 15 years from Yahoo Finance. 
+The aim of the project is to build a Stock Price Predictor Which Can predict price of stock 7 days in advance.
 
 The Project is divided in the following Sections:
 
 1. Data Processing, ETL Pipeline to extract data from source, clean data and save them in a proper database structure
-2. Machine Learning Pipeline to train a model able to classify text message in categories
+2. Machine Learning Pipeline to train a model able to predict price of stock 7 days in advance
 3. Web App to show model results in real time. 
 
 <a name="getting_started"></a>
@@ -29,17 +29,17 @@ The Project is divided in the following Sections:
 
 <a name="dependencies"></a>
 ### Dependencies
-* Python 3.5+ (I used Python 3.7)
-* Machine Learning Libraries: NumPy, SciPy, Pandas, Scikit-Learn
-* Natural Language Process Libraries: NLTK
-* SQLlite Database Libraqries: SQLalchemy
-* Web App and Data Visualization: Flask, Plotly
+All Dependencies Are Specified In requirements.txt
+Install Dependencies Following Way:
+```
+pip install -r requirements.txt
+```
 
 <a name="installing"></a>
 ### Installing
 Clone this GIT repository:
 ```
-git clone https://github.com/buchan123/Disaster-Response-Pipeline.git
+git clone https://github.com/buchan123/Udacity-DSND-Capstone-Investment-And-Trading.git
 ```
 <a name="executing"></a>
 ### Executing Program:
@@ -69,19 +69,19 @@ git clone https://github.com/buchan123/Disaster-Response-Pipeline.git
 ## Acknowledgements
 
 * [Udacity](https://www.udacity.com/) for providing such a complete Data Science Nanodegree Program
-* [Figure Eight](https://www.figure-eight.com/) for providing messages dataset to train my model
+* [Yahoo Finance](https://in.finance.yahoo.com/) for providing stock price dataset to train my model
 
 <a name="screenshots"></a>
 ## Screenshots
 
-1. This is an example of a message you can type to test Machine Learning model performance
+1. This is an example of a date you can type and select the stock to test Machine Learning model performance
 
 ![Sample Input](screenshots/sample_input.png)
 
-2. After clicking **Classify Message**, you can see the categories which the message belongs to highlighted in green
+2. After clicking **Try it Now**, you can see the predicted price and the actual price if available.
 
 ![Sample Output](screenshots/sample_output.png)
 
-3. The main page shows some graphs about training dataset, provided by Figure Eight
+3. The main page
 
 ![Main Page](screenshots/main_page.png)
