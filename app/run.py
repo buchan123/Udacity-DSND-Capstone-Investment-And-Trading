@@ -164,8 +164,8 @@ def go():
     	actual = df.loc[future]["Close"]
     	error = round((np.abs(actual - predicted)/actual) * 100,2)
     except:
-    	actual = 'Date In Future'
-    	error = 0
+    	actual = "No Actual Records For This Date : {}".format(future)
+    	error = "Try Other Date Values"
     	
 
 
