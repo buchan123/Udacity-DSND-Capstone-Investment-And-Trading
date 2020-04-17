@@ -4,7 +4,6 @@ warnings.filterwarnings("ignore")
 import sys
 import pandas as pd
 import numpy as np
-from tensorflow.python.framework import random_seed
 from matplotlib import pyplot as plt
 import xgboost as xgb
 from catboost import CatBoostRegressor
@@ -83,9 +82,8 @@ def load_data(database_filepath):
 class ModelData():
     '''Data Class For Model Train, Predict And Validate.'''
     def __init__(self,X,y,seed=None,shuffle=True):
-        seed1, seed2 = random_seed.get_seed(seed)
-        # If op level seed is not set, use whatever graph level seed is returned
-        self._seed = seed1 if seed is None else seed2
+        
+        self._seed = seed 
         np.random.seed(self._seed)
         
         assert X.shape[0] == y.shape[0], (

@@ -2,11 +2,7 @@ import warnings
 warnings.filterwarnings("ignore")
 from flask import Flask
 from flask import render_template, request, jsonify
-from plotly.graph_objs import Bar
 from sklearn.externals import joblib
-from sqlalchemy import create_engine
-import json
-import plotly
 import pandas as pd
 import numpy as np
 import xgboost as xgb
@@ -186,4 +182,4 @@ def home():
 
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()
