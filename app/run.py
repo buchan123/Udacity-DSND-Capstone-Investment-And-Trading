@@ -158,7 +158,7 @@ def go():
 
     temp = process_data(df.loc[:end])
     temp = temp.tail(7).values.reshape(1,-1)
-    predicted = model['xgb'].predict(temp)
+    predicted = (model['xgb'].predict(temp) + model['cat'].predict(temp) ) / 2
     predicted = round(np.exp(predicted)[0],2)
     try :
     	actual = df.loc[future]["Close"]
